@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'RasterizedReceiptPrinting_Example' do
+  pod 'RasterizedReceiptPrinting', :path => '../'
+
+  target 'RasterizedReceiptPrinting_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
