@@ -1,42 +1,24 @@
-#
-# Be sure to run `pod lib lint RasterizedReceiptPrinting.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'RasterizedReceiptPrinting'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of RasterizedReceiptPrinting.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.summary          = 'Receipt printing to POS printer with support for Unicode'
+  s.ios.deployment_target = '9.3'
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Printing Unicode with Command mode to Receipt printers are not reliable. The best solution so far is to printing to a UIImage and then send the whole image over to printer.
+With this approach, developer can control totally the Unicode printing work and it''s easier to manage the layout.
+However, Mono-Font must be used to make alignment more precise.
                        DESC
 
   s.homepage         = 'https://github.com/chinhnguyen/RasterizedReceiptPrinting'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.screenshots     = 'https://photos.google.com/share/AF1QipPGnVaAF9p2uC5p2v8YWzSR04UhveV62IHa3i5bqNFf5l9TV5BFH06c0n8xtEdy2g?key=MVNvN3JtVTNmdmRjSlNWeDRtLUttU0p3RDBXWjdB'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'chinhnguyen' => 'chinh@smarp.com' }
+  s.author           = { 'chinhnguyen' => 'chinh@willbe.vn' }
   s.source           = { :git => 'https://github.com/chinhnguyen/RasterizedReceiptPrinting.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '8.0'
-
+  s.social_media_url = 'https://twitter.com/ngtr9h'
+  s.ios.deployment_target = '9.0'
   s.source_files = 'RasterizedReceiptPrinting/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'RasterizedReceiptPrinting' => ['RasterizedReceiptPrinting/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.resource_bundles = {
+      'RasterizedReceiptPrinting' => ['RasterizedReceiptPrinting/Assets/*.ttf']
+  }
+  s.framework = 'UIKit'
 end

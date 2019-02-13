@@ -1,0 +1,6 @@
+framework module RasterizedReceiptPrinting {
+  umbrella header "RasterizedReceiptPrinting-umbrella.h"
+
+  export *
+  module * { export * }
+}

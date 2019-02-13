@@ -1,0 +1,16 @@
+PODS:
+  - RasterizedReceiptPrinting (0.1.0)
+
+DEPENDENCIES:
+  - RasterizedReceiptPrinting (from `../`)
+
+EXTERNAL SOURCES:
+  RasterizedReceiptPrinting:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  RasterizedReceiptPrinting: 3be745b6276f3484cea9574e690b50e9e1d9b945
+
+PODFILE CHECKSUM: f4e5d8a7b7a17e26ed0871a0e7ae2736867d8c4e
+
+COCOAPODS: 1.5.3
