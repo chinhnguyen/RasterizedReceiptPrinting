@@ -11,6 +11,8 @@ import RasterizedReceiptPrinting
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var mainImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -21,6 +23,7 @@ class ViewController: UIViewController {
         // TSP 100 3 inches = 576
         if let image = data.rasterize(width: 576) {
             do {
+                mainImageView.image = image
                 let filePath = try image.save(toTempDirectory: "sample.png")
                 print("Printed to \(filePath)")
             } catch {

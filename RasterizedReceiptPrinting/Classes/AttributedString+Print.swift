@@ -11,7 +11,9 @@ import UIKit
 
 // Constants font type
 let fontRegular = "TheSansMonoCondensed-Plain"
-let fontBold = "TheSansMonoCondensed-SemiBold"
+let fontBold = "TheSansMonoCondensed-Semi-Bold"
+let fontRegularFileName = "TheSansMonoCondensed_Plain"
+let fontBoldFileName = "TheSansMonoCondensed_Semi_Bold"
 public let printingFontSizeBase: CGFloat = 24
 
 // MARK: - Extension for rasterizing to image.
@@ -35,14 +37,17 @@ public extension NSAttributedString {
         } else {
             UIGraphicsBeginImageContext(dataSize)
         }
-        // Build the image
-        guard let context = UIGraphicsGetCurrentContext(), let image = UIGraphicsGetImageFromCurrentImageContext() else {
+        guard let context = UIGraphicsGetCurrentContext() else {
             return nil
         }
         UIColor.white.set()
         let rect = CGRect(x: 0, y: 0, width: dataSize.width + 1, height: dataSize.height + 1)
         context.fill(rect)
         self.draw(in: rect)
+        // Build the image
+        guard let image = UIGraphicsGetImageFromCurrentImageContext() else {
+            return nil
+        }
         UIGraphicsEndImageContext()
         return image
     }
@@ -163,25 +168,29 @@ public extension NSMutableAttributedString {
 
 
 extension UIFont {
+    
     class func loadAllFonts() {
-        registerFont(fontRegular)
-        registerFont(fontBold)
+        registerFont(fontRegularFileName)
+        registerFont(fontBoldFileName)
     }
     
     class func registerFont(_ name: String) {
-        guard let frameworkBundle = Bundle(identifier: "RasterizedReceiptPrinting"),
-            let pathForResourceString = frameworkBundle.path(forResource: name, ofType: "ttf"),
-            let fontData = NSData(contentsOfFile: pathForResourceString),
+        guard let frameworkBundle = Bundle(identifier: "org.cocoapods.RasterizedReceiptPrinting"),
+            let resourceURL = frameworkBundle.resourceURL?.appendingPathComponent("RasterizedReceiptPrinting.bundle"),
+            let resourceBundle = Bundle(url: resourceURL),
+            let pathForResourceURL = resourceBundle.url(forResource: name, withExtension: "ttf"),
+            let fontData = NSData(contentsOf: pathForResourceURL),
             let dataProvider = CGDataProvider(data: fontData),
             let fontRef = CGFont(dataProvider) else {
-                print("RasterizedReceiptPrinting: Failed to load fonts.")
-                return
+            print("RasterizedReceiptPrinting: Failed to load fonts.")
+            return
         }
         var errorRef: Unmanaged<CFError>? = nil
         if !CTFontManagerRegisterGraphicsFont(fontRef, &errorRef) {
-            print("RasterizedReceiptPrinting: Failed to register fonts.")
+            print("RasterizedReceiptPrinting: Failed to register fonts. Error: \(errorRef.debugDescription)")
         }
     }
+    
 }
 
 
