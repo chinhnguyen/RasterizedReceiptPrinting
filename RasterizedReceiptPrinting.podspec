@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'RasterizedReceiptPrinting'
-  s.version          = '0.1.0'
+  s.version          = '0.1.2'
   s.summary          = 'Receipt printing to POS printer with support for Unicode'
   s.ios.deployment_target = '9.3'
   s.description      = <<-DESC
@@ -21,4 +21,5 @@ However, Mono-Font must be used to make alignment more precise.
       'RasterizedReceiptPrinting' => ['RasterizedReceiptPrinting/Assets/*.ttf']
   }
   s.framework = 'UIKit'
+  s.swift_version = '4.0'
 end
