@@ -58,34 +58,34 @@
 		36AD602E609167E856630DE2842FB1BB /* Pods-RasterizedReceiptPrinting_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RasterizedReceiptPrinting_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		41525DCB97CFAC01A05E066D9F0ADA6A /* Pods-RasterizedReceiptPrinting_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RasterizedReceiptPrinting_Example.modulemap"; sourceTree = "<group>"; };
 		435B7013809CBF1AFCB8A5EC44737E14 /* Pods-RasterizedReceiptPrinting_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RasterizedReceiptPrinting_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		49BBACC3161D020C39467161736541B7 /* TheSansMonoCondensed_Plain.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = TheSansMonoCondensed_Plain.ttf; path = RasterizedReceiptPrinting/Assets/TheSansMonoCondensed_Plain.ttf; sourceTree = "<group>"; };
+		49BBACC3161D020C39467161736541B7 /* TheSansMonoCondensed_Plain.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = TheSansMonoCondensed_Plain.ttf; path = RasterizedReceiptPrinting/Assets/TheSansMonoCondensed_Plain.ttf; sourceTree = "<group>"; };
 		579CB8C5104147E135F6D3033F3AE486 /* Pods-RasterizedReceiptPrinting_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RasterizedReceiptPrinting_Example-resources.sh"; sourceTree = "<group>"; };
 		57FAB4DD0E8CE6DD8E2AE898EFA6B11F /* ResourceBundle-RasterizedReceiptPrinting-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-RasterizedReceiptPrinting-Info.plist"; sourceTree = "<group>"; };
 		5B4E011FC4D4AD24203E9DC9869D857C /* Pods-RasterizedReceiptPrinting_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RasterizedReceiptPrinting_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		6226E5623222EF69AAF88AB83E9F7CC9 /* RasterizedReceiptPrinting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RasterizedReceiptPrinting.framework; path = RasterizedReceiptPrinting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6739695494E826DDAFA2F5F3BE28F00A /* Pods_RasterizedReceiptPrinting_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RasterizedReceiptPrinting_Tests.framework; path = "Pods-RasterizedReceiptPrinting_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6226E5623222EF69AAF88AB83E9F7CC9 /* RasterizedReceiptPrinting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RasterizedReceiptPrinting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6739695494E826DDAFA2F5F3BE28F00A /* Pods_RasterizedReceiptPrinting_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RasterizedReceiptPrinting_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68239310CE9D0B8F0C175D6BE78D1057 /* Pods-RasterizedReceiptPrinting_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RasterizedReceiptPrinting_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		6AD1472CEA0F18304BF3648242787BA8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B0588C38E506785A65B0A4BC4BDC5B9 /* Pods-RasterizedReceiptPrinting_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RasterizedReceiptPrinting_Tests-resources.sh"; sourceTree = "<group>"; };
 		75FA006AE8572DDFACB887226C8ECA58 /* Pods-RasterizedReceiptPrinting_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RasterizedReceiptPrinting_Example-frameworks.sh"; sourceTree = "<group>"; };
-		8BB802BB54FDB4A8F66D0447798B7F1C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		8BB802BB54FDB4A8F66D0447798B7F1C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8F04722A68594D3A5BC55B85CA822F37 /* Pods-RasterizedReceiptPrinting_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RasterizedReceiptPrinting_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8FC43B6C67ADCEDBD29F495EF4404A64 /* Pods-RasterizedReceiptPrinting_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RasterizedReceiptPrinting_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9A35BDAA9979A9615A93BF32EC74AF6A /* RasterizedReceiptPrinting.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RasterizedReceiptPrinting.xcconfig; sourceTree = "<group>"; };
 		9AD246D1F90B594614D268217D56E0DB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9CEB9B93F54B8FA2E7E58D609509AA98 /* TheSansMonoCondensed_Semi_Bold.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = TheSansMonoCondensed_Semi_Bold.ttf; path = RasterizedReceiptPrinting/Assets/TheSansMonoCondensed_Semi_Bold.ttf; sourceTree = "<group>"; };
+		9CEB9B93F54B8FA2E7E58D609509AA98 /* TheSansMonoCondensed_Semi_Bold.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = TheSansMonoCondensed_Semi_Bold.ttf; path = RasterizedReceiptPrinting/Assets/TheSansMonoCondensed_Semi_Bold.ttf; sourceTree = "<group>"; };
 		9F7856900C3729A9D28375BACE0F3E2A /* Pods-RasterizedReceiptPrinting_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RasterizedReceiptPrinting_Example.release.xcconfig"; sourceTree = "<group>"; };
-		A072335AB06434AF25849FA1F25FFCF4 /* RasterizedReceiptPrinting.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = RasterizedReceiptPrinting.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A072335AB06434AF25849FA1F25FFCF4 /* RasterizedReceiptPrinting.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = RasterizedReceiptPrinting.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A593A698987CD95DAA663E4DEFC83168 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB3C10AEF3157B8163D9BD0CD6C2E4D1 /* Pods-RasterizedReceiptPrinting_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RasterizedReceiptPrinting_Tests-umbrella.h"; sourceTree = "<group>"; };
 		BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		C45B7BB4B4264B6F1DFEED3FE10E3D71 /* Pods_RasterizedReceiptPrinting_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RasterizedReceiptPrinting_Example.framework; path = "Pods-RasterizedReceiptPrinting_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C45B7BB4B4264B6F1DFEED3FE10E3D71 /* Pods_RasterizedReceiptPrinting_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RasterizedReceiptPrinting_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8FFB7AB31190CEC4F855B51A8C514F /* Pods-RasterizedReceiptPrinting_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RasterizedReceiptPrinting_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2F8B389D712BC36A6F501B747ADFA06 /* Pods-RasterizedReceiptPrinting_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RasterizedReceiptPrinting_Example-umbrella.h"; sourceTree = "<group>"; };
-		D668578089E445B77070BC7810B29848 /* RasterizedReceiptPrinting.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = RasterizedReceiptPrinting.bundle; path = "RasterizedReceiptPrinting-RasterizedReceiptPrinting.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC2F24B5920EEAA1326C964191EC3DCF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		D668578089E445B77070BC7810B29848 /* RasterizedReceiptPrinting.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RasterizedReceiptPrinting.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC2F24B5920EEAA1326C964191EC3DCF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		DDFE04937FEE66CEBA3E94A111CDE173 /* Pods-RasterizedReceiptPrinting_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RasterizedReceiptPrinting_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E1ECF55AF6C3560D2E1C950074C95CDA /* Pods-RasterizedReceiptPrinting_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RasterizedReceiptPrinting_Tests.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -374,6 +374,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					94C65BDFF89D7C537D68B993290C0870 = {
+						LastSwiftMigration = 1010;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -660,7 +665,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -820,7 +825,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
