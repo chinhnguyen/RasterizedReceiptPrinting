@@ -133,13 +133,13 @@ public extension NSMutableAttributedString {
         paragraph.lineSpacing = 10.0
         paragraph.alignment = center ? .center : .left
         var attributes = [
-            NSAttributedStringKey.backgroundColor: UIColor.clear,
-            NSAttributedStringKey.foregroundColor: UIColor.black,
-            NSAttributedStringKey.font: font as Any,
-            NSAttributedStringKey.paragraphStyle: paragraph]
+            NSAttributedString.Key.backgroundColor: UIColor.clear,
+            NSAttributedString.Key.foregroundColor: UIColor.black,
+            NSAttributedString.Key.font: font as Any,
+            NSAttributedString.Key.paragraphStyle: paragraph]
         if underline {
-            attributes[NSAttributedStringKey.underlineColor] = UIColor.black
-            attributes[NSAttributedStringKey.underlineStyle] = NSUnderlineStyle.styleThick.rawValue
+            attributes[NSAttributedString.Key.underlineColor] = UIColor.black
+            attributes[NSAttributedString.Key.underlineStyle] = NSUnderlineStyle.thick.rawValue
         }
         self.append(NSAttributedString(string: text, attributes: attributes))
     }
@@ -159,7 +159,7 @@ public extension NSMutableAttributedString {
         let paragraph = NSMutableParagraphStyle()
         paragraph.lineSpacing = 12.0
         paragraph.alignment = .center
-        let attributes = [NSAttributedStringKey.paragraphStyle: paragraph]
+        let attributes = [NSAttributedString.Key.paragraphStyle: paragraph]
         logoString.addAttributes(attributes, range: NSMakeRange(0, iconString.length))
         append(logoString)
         append("\n")
