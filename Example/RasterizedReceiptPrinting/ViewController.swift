@@ -228,7 +228,7 @@ extension UIImage {
     /// - Parameter filePath: the file path.
     /// - Throws: throws if the png image could not be created.
     func save(to filePath: String) throws -> String {
-        guard let fileURL = URL(string: "file://\(filePath)"), let png = UIImagePNGRepresentation(self) else {
+        guard let fileURL = URL(string: "file://\(filePath)"), let png = self.pngData() else {
             return ""
         }
         try png.write(to: fileURL)
