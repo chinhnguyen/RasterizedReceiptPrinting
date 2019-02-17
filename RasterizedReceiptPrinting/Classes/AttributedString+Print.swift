@@ -11,7 +11,7 @@ import UIKit
 
 // Constants font type
 let fontRegular = "TheSansMonoCondensed-Plain"
-let fontBold = "TheSansMonoCondensed-Semi-Bold"
+let fontBold = "TheSansMonoCondensed-SemiBold"
 let fontRegularFileName = "TheSansMonoCondensed_Plain"
 let fontBoldFileName = "TheSansMonoCondensed_Semi_Bold"
 public let printingFontSizeBase: CGFloat = 24
@@ -55,7 +55,7 @@ public extension NSAttributedString {
 
 /// Extension NSMutableAttributedString to append string with NSAttributedString
 public extension NSMutableAttributedString {
-
+    
     public func appendX2(_ text: String) {
         self.append(text, bold: false, center: false, size: printingFontSizeBase*2)
     }
@@ -84,12 +84,12 @@ public extension NSMutableAttributedString {
         self.append(text, bold: true, center: true, size: printingFontSizeBase*2)
     }
     public func appendGroupSeperateLine(_ text : String) {
-        self.append(text, bold: false, center: true, size: printingFontSizeBase*2)
+        self.append(text, bold: false, center: true, size: printingFontSizeBase*2, isGroupLine: true)
     }
     public func appendPrintLargeTableName(_ text : String) {
-        self.append(text, bold: true, center: true, size: printingFontSizeBase*3, underline: true)
+        self.append(text, bold: true, center: true, size: printingFontSizeBase*3, isGroupLine: false, underline: true)
     }
-
+    
     /// Append a string with custom style.
     ///
     /// - Parameters:
@@ -98,8 +98,8 @@ public extension NSMutableAttributedString {
     ///   - center: `true` to center aligned.
     ///   - fontSize: the size of the text.
     ///   - isGroupLine: check for case is seperate line
-    public func append(_ text: String, bold: Bool = false, center: Bool = false, size fontSize: CGFloat = printingFontSizeBase) {
-        self.append(text, bold: bold, center: center, size: fontSize, underline: false)
+    public func append(_ text: String, bold: Bool = false, center: Bool = false, size fontSize: CGFloat = printingFontSizeBase, isGroupLine: Bool = false) {
+        self.append(text, bold: bold, center: center, size: fontSize, isGroupLine: isGroupLine, underline: false)
     }
     
     /// Append a string with custom style.
@@ -110,16 +110,17 @@ public extension NSMutableAttributedString {
     ///   - center: `true` to center aligned.
     ///   - fontSize: the size of the text.
     ///   - underline: text underlining
-    public func append(_ text: String, bold: Bool = false, center: Bool = false, size fontSize: CGFloat = printingFontSizeBase, underline: Bool = false) {
+    public func append(_ text: String, bold: Bool = false, center: Bool = false, size fontSize: CGFloat = printingFontSizeBase, isGroupLine: Bool = false, underline: Bool = false) {
         if let font = UIFont(name: bold ? fontBold : fontRegular, size: fontSize) {
-            append(text, font: font, center: center, underline: underline)
+            append(text, font: font, center: center, isGroupLine: isGroupLine, underline: underline)
         } else {
             UIFont.loadAllFonts()
             if let font = UIFont(name: bold ? fontBold : fontRegular, size: fontSize) {
-                append(text, font: font, center: center, underline: underline)
+                append(text, font: font, center: center, isGroupLine: isGroupLine, underline: underline)
             }
         }
     }
+    
     
     /// Append text with specific font.
     ///
@@ -128,13 +129,17 @@ public extension NSMutableAttributedString {
     ///   - font: the font to be used
     ///   - center: center text
     ///   - underline: underline text
-    public func append(_ text: String, font: UIFont, center: Bool = false, underline: Bool = false) {
+    public func append(_ text: String, font: UIFont, center: Bool = false, isGroupLine: Bool = false, underline: Bool = false) {
         let paragraph = NSMutableParagraphStyle()
         paragraph.lineSpacing = 10.0
         paragraph.alignment = center ? .center : .left
+        if isGroupLine {
+            paragraph.paragraphSpacing = 16.0
+            paragraph.lineSpacing = 0.0
+        }
         var attributes = [
-            NSAttributedStringKey.backgroundColor: UIColor.clear,
-            NSAttributedStringKey.foregroundColor: UIColor.black,
+            NSAttributedStringKey.backgroundColor: isGroupLine ? UIColor.black : UIColor.clear,
+            NSAttributedStringKey.foregroundColor: isGroupLine ? UIColor.white : UIColor.black,
             NSAttributedStringKey.font: font as Any,
             NSAttributedStringKey.paragraphStyle: paragraph]
         if underline {
@@ -182,8 +187,8 @@ extension UIFont {
             let fontData = NSData(contentsOf: pathForResourceURL),
             let dataProvider = CGDataProvider(data: fontData),
             let fontRef = CGFont(dataProvider) else {
-            print("RasterizedReceiptPrinting: Failed to load fonts.")
-            return
+                print("RasterizedReceiptPrinting: Failed to load fonts.")
+                return
         }
         var errorRef: Unmanaged<CFError>? = nil
         if !CTFontManagerRegisterGraphicsFont(fontRef, &errorRef) {
