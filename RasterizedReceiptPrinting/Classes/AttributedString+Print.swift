@@ -182,9 +182,7 @@ extension UIFont {
     class func registerFont(_ name: String) {
         guard let frameworkBundle = Bundle(identifier: "org.cocoapods.RasterizedReceiptPrinting"),
             let resourceURL = frameworkBundle.resourceURL?.appendingPathComponent("RasterizedReceiptPrinting.bundle"),
-            let resourceBundle = Bundle(url: resourceURL),
-            let pathForResourceURL = resourceBundle.url(forResource: name, withExtension: "ttf"),
-            let fontData = NSData(contentsOf: pathForResourceURL),
+            let fontData = NSData(contentsOf: resourceURL.appendingPathComponent("\(name).ttf")),
             let dataProvider = CGDataProvider(data: fontData),
             let fontRef = CGFont(dataProvider) else {
                 print("RasterizedReceiptPrinting: Failed to load fonts.")
