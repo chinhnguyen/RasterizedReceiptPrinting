@@ -23,6 +23,7 @@ pod 'RasterizedReceiptPrinting'
 ## Author
 
 Chinh Nguyen, chinh@willbe.vn
+Tien Pham, phduytien4891@gmail.com
 
 ## License
 
