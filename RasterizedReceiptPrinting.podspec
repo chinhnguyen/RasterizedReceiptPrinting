@@ -10,7 +10,7 @@ However, Mono-Font must be used to make alignment more precise.
                        DESC
 
   s.homepage         = 'https://github.com/chinhnguyen/RasterizedReceiptPrinting'
-  s.screenshots     = 'https://photos.google.com/share/AF1QipPGnVaAF9p2uC5p2v8YWzSR04UhveV62IHa3i5bqNFf5l9TV5BFH06c0n8xtEdy2g?key=MVNvN3JtVTNmdmRjSlNWeDRtLUttU0p3RDBXWjdB'
+  s.screenshots      = 'https://raw.githubusercontent.com/chinhnguyen/RasterizedReceiptPrinting/master/receipt_thermal.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'chinhnguyen' => 'chinh@willbe.vn' }
   s.source           = { :git => 'https://github.com/chinhnguyen/RasterizedReceiptPrinting.git', :tag => s.version.to_s }

@@ -5,11 +5,41 @@
 [![License](https://img.shields.io/cocoapods/l/RasterizedReceiptPrinting.svg?style=flat)](https://cocoapods.org/pods/RasterizedReceiptPrinting)
 [![Platform](https://img.shields.io/cocoapods/p/RasterizedReceiptPrinting.svg?style=flat)](https://cocoapods.org/pods/RasterizedReceiptPrinting)
 
-## Example
+Printing Unicode with Command mode to Receipt printers are not reliable. The best solution so far is to printing to a UIImage and then send the whole image over to printer.
+With this approach, developer can control totally the Unicode printing work and it''s easier to manage the layout.
+However, Mono-Font must be used to make alignment more precise.
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+![](https://github.com/chinhnguyen/RasterizedReceiptPrinting/blob/master/receipt_thermal.png)
 
-## Requirements
+## Usage
+
+Firstly, we must create a `NSAttributedString`.
+
+- **Implement Swift**:
+
+    ```swift
+    let printTemplate = NSMutableAttributedString(string: "")
+    ```
+
+Then, we can append new attributed string for this template like this.
+
+- **Implement Swift**:
+
+    ```swift
+    printTemplate.append("Hello World!!!\n")
+    printTemplate.appendCenter("This is a center body.\n")
+    printTemplate.appendBold("End World!!!\n")
+    ```
+
+Finally, create image from custom string with page width setting.
+
+- **Implement Swift**:
+
+    ```swift
+    let image = printTemplate.rasterize(width: 576)
+    ```
+
+Congratulations! You're done. 🎉
 
 ## Installation
 
@@ -19,6 +49,25 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'RasterizedReceiptPrinting'
 ```
+
+## Before using module
+
+#### Swift
+
+Add the following line in your Swift file: 
+
+```swift
+import RasterizedReceiptPrinting
+```
+
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+## Requirements
+
+- Swift 4.0
+- iOS 9.0 or later
 
 ## Author
 
