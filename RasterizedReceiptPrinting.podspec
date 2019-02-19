@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'RasterizedReceiptPrinting'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'Receipt printing to POS printer with support for Unicode'
   s.ios.deployment_target = '9.3'
   s.description      = <<-DESC
