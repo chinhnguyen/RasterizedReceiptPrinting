@@ -9,7 +9,7 @@ Printing Unicode with Command mode to Receipt printers are not reliable. The bes
 With this approach, developer can control totally the Unicode printing work and it''s easier to manage the layout.
 However, Mono-Font must be used to make alignment more precise.
 
-![](https://github.com/chinhnguyen/RasterizedReceiptPrinting/blob/master/receipt_thermal.png)
+![](https://github.com/chinhnguyen/RasterizedReceiptPrinting/blob/master/receipt_thermal.png=300x630)
 
 ## Usage
 
